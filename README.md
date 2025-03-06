@@ -44,7 +44,30 @@ churnDSA/
 - Node.js 14+
 - Docker and Docker Compose (optional for containerized deployment)
 
-### Backend Setup
+### Option 1: Using Docker (Recommended)
+
+The easiest way to run the application is using Docker:
+
+1. Make sure Docker and Docker Compose are installed on your system.
+
+2. Clone the repository:
+   ```
+   git clone <repository-url>
+   cd churnDSA
+   ```
+
+3. Build and start the containers:
+   ```
+   docker-compose up --build
+   ```
+
+4. Access the application:
+   - Frontend: http://localhost
+   - Backend API: http://localhost:5000
+
+### Option 2: Manual Setup
+
+#### Backend Setup
 1. Create a virtual environment:
    ```
    python -m venv venv
@@ -62,7 +85,7 @@ churnDSA/
    python app.py
    ```
 
-### Frontend Setup
+#### Frontend Setup
 1. Install dependencies:
    ```
    cd frontend
@@ -74,17 +97,36 @@ churnDSA/
    npm start
    ```
 
-### Using Docker (Optional)
-1. Build and start the containers:
-   ```
-   docker-compose up --build
-   ```
-
 ## Usage
 Once both the backend and frontend are running:
-1. Access the web interface at http://localhost:3000
+1. Access the web interface at http://localhost:3000 (or http://localhost if using Docker)
 2. Input customer data to get churn predictions and retention strategies
 3. View visualizations and analytics on the dashboard
+
+## API Endpoints
+
+The backend API provides the following endpoints:
+
+- `GET /health`: Health check endpoint
+- `POST /predict`: Predict churn for a customer
+- `GET /strategies`: Get retention strategies for a risk segment
+- `GET /customer/:id`: Get customer data and prediction history
+
+## Data Processing and Model Training
+
+The project includes Jupyter notebooks for data exploration and model training:
+
+1. `notebooks/01_data_exploration.ipynb`: Exploratory data analysis of the Telco Customer Churn dataset
+2. `notebooks/02_model_training.ipynb`: Training and evaluation of machine learning models
+
+## Docker Deployment
+
+The project includes Docker configuration for easy deployment:
+
+- `docker/Dockerfile.api`: Dockerfile for the Flask backend
+- `docker/Dockerfile.frontend`: Dockerfile for the React frontend
+- `docker/nginx.conf`: Nginx configuration for the frontend
+- `docker-compose.yml`: Docker Compose configuration for orchestrating the services
 
 ## License
 [MIT License](LICENSE) 

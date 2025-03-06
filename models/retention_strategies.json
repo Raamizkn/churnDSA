@@ -1,0 +1,40 @@
+{
+    "Low Risk": [
+        "Regular check-ins",
+        "Loyalty program enrollment",
+        "Feedback surveys",
+        "Newsletter subscription"
+    ],
+    "Medium-Low Risk": [
+        "Personalized usage tips",
+        "Cross-sell complementary services",
+        "Exclusive content access",
+        "Community engagement invitations",
+        "Referral program incentives"
+    ],
+    "Medium Risk": [
+        "Service review call",
+        "Targeted promotions",
+        "Usage incentives",
+        "Upgrade offers",
+        "Loyalty rewards",
+        "Educational webinars"
+    ],
+    "Medium-High Risk": [
+        "Proactive service check",
+        "Discount on current services",
+        "Personalized retention offer",
+        "Contract review",
+        "Service enhancement options",
+        "Dedicated account manager"
+    ],
+    "High Risk": [
+        "Immediate outreach",
+        "Significant discount offer",
+        "Service upgrade at reduced cost",
+        "Executive customer service",
+        "Contract flexibility options",
+        "Customized solution package",
+        "Win-back incentives"
+    ]
+} 
