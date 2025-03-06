@@ -14,7 +14,7 @@ gunicorn==21.2.0
 # Database
 sqlalchemy==2.0.20
 psycopg2-binary==2.9.7  # For PostgreSQL
-sqlite3-api==0.1.0      # For SQLite (fallback)
+sqlite3-api==2.0.4      # For SQLite (fallback)
 
 # Model serialization
 joblib==1.3.2
