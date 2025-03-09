@@ -20,7 +20,7 @@ class ChurnPredictor:
         # Set default paths if not provided
         if model_path is None:
             model_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 
-                                     'models', 'xgboost_model.pkl')
+                                     'models', 'best_churn_model.joblib')
         
         if strategies_path is None:
             strategies_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 
